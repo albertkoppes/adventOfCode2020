@@ -154,10 +154,6 @@ public class AdventOfCode2020Day12
                 newShip.waypoint.state.x = newShip.state.x-yDistance;
             }
 
-            private Ship generateNewShip()
-            {
-                return new Ship(state.x, state.y, state.direction, waypoint.state.x, waypoint.state.y, waypoint.state.direction);
-            }
         }
 
          static class Waypoint
