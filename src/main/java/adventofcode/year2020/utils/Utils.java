@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 public class Utils
 {
 
-    public static final String BASE_DIR = "C:/Development/IdeaProjects/java9andhigher/src/main/java/adventofcode/year2020/input/";
+    public static final String BASE_DIR = "C:\\Development\\IdeaProjects\\adventofcode2020\\src\\main\\java\\adventofcode\\year2020\\input\\";
 
     public static List<String> readLines( String fileName)
     {

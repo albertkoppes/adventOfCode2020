@@ -28,7 +28,7 @@ class AdventOfCode2020Day13Test
         assertEquals(295, shuttleSearch.calcSmallestWaitTimeTimesBusId());
         shuttleSearch = new AdventOfCode2020Day13.ShuttleSearch("inputDay13.txt");
         assertEquals(4722, shuttleSearch.calcSmallestWaitTimeTimesBusId());
-       assertEquals(1068781, shuttleSearch.calcEarliestTimeStamp());
+//       assertEquals(1068781, shuttleSearch.calcEarliestTimeStamp());
     }
     @Test
     void testSmallestTimeStamp()
