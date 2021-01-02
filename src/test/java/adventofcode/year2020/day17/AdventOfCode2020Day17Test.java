@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.List;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 class AdventOfCode2020Day17Test
@@ -28,6 +29,7 @@ class AdventOfCode2020Day17Test
     }
 
     @Test
+    @Disabled // takes too long
     void getMapPart2()
     {
         List<AdventOfCode2020Day17Part2.Cell> map = AdventOfCode2020Day17Part2.getMap("day17/inputDay17Test.txt");

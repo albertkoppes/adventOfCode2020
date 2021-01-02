@@ -1,4 +1,4 @@
-package adventofcode.year2020;
+package adventofcode.year2020.day18;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,23 +9,23 @@ import adventofcode.year2020.utils.Utils;
 
 public class AdventOfCode2020Day18
 {
-    enum MathemathicPreference
+    enum MathematicsPreference
     {
         MULTIPLY(AdventOfCode2020Day18::calcResultPreferMultiply),
         ADDITION(AdventOfCode2020Day18::calcResultPreferAddition),
         NONE(AdventOfCode2020Day18::calcResult);
         private final Function<String, Long> resultCalculation;
 
-        MathemathicPreference(Function<String, Long> resultCalculation)
+        MathematicsPreference(Function<String, Long> resultCalculation)
         {
             this.resultCalculation = resultCalculation;
         }
     }
-    static MathemathicPreference mathemathicPreference = MathemathicPreference.NONE;
+    static MathematicsPreference mathematicsPreference = MathematicsPreference.NONE;
     public static void main(String[] args)
     {
         System.out.println(getSumOfResults("day18/inputDay18.txt")); //75592527415659
-        mathemathicPreference = MathemathicPreference.ADDITION;
+        mathematicsPreference = MathematicsPreference.ADDITION;
         System.out.println(getSumOfResults("day18/inputDay18.txt")); //360029542265462
     }
 
@@ -77,7 +77,7 @@ public class AdventOfCode2020Day18
         int indexOfOpenParenthesis = line.indexOf(OPEN_PARENTHESIS);
         if (indexOfOpenParenthesis == -1)
         {
-            return String.valueOf(mathemathicPreference.resultCalculation.apply(line));
+            return String.valueOf(mathematicsPreference.resultCalculation.apply(line));
         }
         else
         {
