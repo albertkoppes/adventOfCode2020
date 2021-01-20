@@ -19,6 +19,7 @@ public class AdventOfCode2020Day21
     {
         System.out.println(getNumberOfIngredientsWithNoAllergens("day21/inputDay21.txt"));
         System.out.println(getCanonicalDangerousIngredientList("day21/inputDay21.txt")); // bjpkhx,thn,snhph,nsnqf,sthnsg,zmfqpn,qrbnjtj,dbhfd
+        // bjq,jznhvh,klplr,dtvhzt,sbzd,tlgjzx,ctmbr,kqmrs
     }
 
     static String getCanonicalDangerousIngredientList(String filename)
@@ -27,7 +28,7 @@ public class AdventOfCode2020Day21
         List<Ingredient> allIngredients = new ArrayList<>();
         getAllPossibleMatches(filename, possibleMatches, allIngredients);
         Set<Ingredient> ingredients = new LinkedHashSet<>();
-        possibleMatches.keySet().stream().sorted().forEach(key->ingredients.addAll(possibleMatches.get(key)));
+        possibleMatches.keySet().stream().sorted().peek(System.out::println).forEach(key->ingredients.addAll(possibleMatches.get(key)));
         StringBuilder canonicalDangerousIngredient = new StringBuilder();
         String sep = "";
         for (Ingredient ingredient : ingredients)
@@ -128,6 +129,15 @@ public class AdventOfCode2020Day21
                 return false;
             Allergen allergen = (Allergen)o;
             return name.equals(allergen.name);
+        }
+
+        @Override
+        public String toString()
+        {
+            final StringBuilder sb = new StringBuilder("Allergen{");
+            sb.append("name='").append(name).append('\'');
+            sb.append('}');
+            return sb.toString();
         }
 
         @Override

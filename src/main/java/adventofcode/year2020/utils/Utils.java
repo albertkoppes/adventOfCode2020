@@ -2,16 +2,21 @@ package adventofcode.year2020.utils;
 
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import org.w3c.dom.ls.LSOutput;
+
 public class Utils
 {
 
-    public static final String BASE_DIR = "C:\\Development\\IdeaProjects\\adventofcode2020\\src\\main\\java\\adventofcode\\year2020\\input\\";
+//    public static final String BASE_DIR = "C:\\Development\\IdeaProjects\\adventofcode2020\\src\\main\\java\\adventofcode\\year2020\\input\\";
+    public static final String BASE_DIR = System.getProperty("user.dir") + "/src/main/java/adventofcode/year2020/input/";
+
 
     public static List<String> readLines( String fileName)
     {

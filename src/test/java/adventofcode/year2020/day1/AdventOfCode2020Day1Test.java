@@ -5,10 +5,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static adventofcode.year2020.day1.AdventOfCode2020Day1.getReportRepair;
 
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import org.junit.jupiter.api.Test;
 
 import adventofcode.year2020.day1.AdventOfCode2020Day1;
+import adventofcode.year2020.utils.Utils;
 
 class AdventOfCode2020Day1Test
 {
