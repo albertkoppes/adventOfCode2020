@@ -1,14 +1,12 @@
 package adventofcode.year2020.day9;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import adventofcode.year2020.day9.AdventOfCodeDay9;
-import adventofcode.year2020.utils.Utils;
+import adventofcode.utils.Utils;
 
 class AdventOfCodeDay9Test
 {

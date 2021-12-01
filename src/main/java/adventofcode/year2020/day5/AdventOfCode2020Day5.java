@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import adventofcode.year2020.utils.Utils;
+import adventofcode.utils.Utils;
 
 public class AdventOfCode2020Day5
 {

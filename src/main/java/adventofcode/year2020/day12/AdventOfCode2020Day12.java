@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.apache.commons.lang3.ArrayUtils;
 
-import adventofcode.year2020.utils.Utils;
+import adventofcode.utils.Utils;
 
 public class AdventOfCode2020Day12
 {

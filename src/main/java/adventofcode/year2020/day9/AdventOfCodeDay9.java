@@ -2,7 +2,7 @@ package adventofcode.year2020.day9;
 
 import java.util.List;
 
-import adventofcode.year2020.utils.Utils;
+import adventofcode.utils.Utils;
 
 public class AdventOfCodeDay9
 {

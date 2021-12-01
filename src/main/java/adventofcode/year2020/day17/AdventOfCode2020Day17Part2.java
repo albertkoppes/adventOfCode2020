@@ -7,7 +7,7 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import adventofcode.year2020.utils.Utils;
+import adventofcode.utils.Utils;
 
 public class AdventOfCode2020Day17Part2
 {

@@ -11,7 +11,7 @@ import java.util.Scanner;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import adventofcode.year2020.utils.Utils;
+import adventofcode.utils.Utils;
 
 public class AdventOfCode2020Day21
 {

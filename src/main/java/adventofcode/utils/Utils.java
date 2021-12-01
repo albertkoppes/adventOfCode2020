@@ -1,4 +1,4 @@
-package adventofcode.year2020.utils;
+package adventofcode.utils;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -13,11 +13,21 @@ public class Utils
 
     public static final String BASE_DIR = "C:\\Development\\IdeaProjects\\adventofcode2020\\src\\main\\java\\adventofcode\\year2020\\input\\";
 
-    public static List<String> readLines( String fileName)
+    public static List<String> readLines(String baseDir, String fileName)
+    {
+        return privateReadLines(baseDir+fileName);
+
+    }
+
+    public static List<String> readLines(String fileName)
+    {
+            return privateReadLines(BASE_DIR + fileName);
+    }
+    public static List<String> privateReadLines(String fileName)
     {
         try
         {
-            return Files.readAllLines(Paths.get(BASE_DIR + fileName));
+            return Files.readAllLines(Paths.get(fileName));
         }
         catch (IOException e)
         {

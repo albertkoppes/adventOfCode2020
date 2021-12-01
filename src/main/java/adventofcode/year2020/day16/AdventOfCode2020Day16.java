@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Scanner;
 
-import adventofcode.year2020.utils.Utils;
+import adventofcode.utils.Utils;
 
 public class AdventOfCode2020Day16
 {

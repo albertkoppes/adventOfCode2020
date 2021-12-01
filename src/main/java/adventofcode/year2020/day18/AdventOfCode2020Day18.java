@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.function.Function;
 
-import adventofcode.year2020.utils.Utils;
+import adventofcode.utils.Utils;
 
 public class AdventOfCode2020Day18
 {
