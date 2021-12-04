@@ -7,6 +7,10 @@ public abstract class AdventOfCode2021Day1
     public static final String INPUT_DAY_1_TXT = "input2021Day1.txt";
     public static final String INPUT_DAY_1A_TXT = "input2021Day1a.txt";
 
+    private AdventOfCode2021Day1()
+    {
+    }
+
     static int getNrOfIncreases(List<Integer> integers)
     {
         return getNrOfIncreases(integers, 1);

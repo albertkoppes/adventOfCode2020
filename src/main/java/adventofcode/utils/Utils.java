@@ -2,19 +2,19 @@ package adventofcode.utils;
 
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import org.w3c.dom.ls.LSOutput;
-
+@SuppressWarnings("squid:S106")
 public class Utils
 {
+    private Utils()
+    {
+    }
 
-//    public static final String BASE_DIR = "C:\\Development\\IdeaProjects\\adventofcode2020\\src\\main\\java\\adventofcode\\year2020\\input\\";
     public static final String BASE_DIR = System.getProperty("user.dir") + "/src/main/java/adventofcode/year2020/input/";
 
 
@@ -106,7 +106,7 @@ public class Utils
         int[] digits = new int[input.length()];
         for (int i=0;i<input.length();i++)
         {
-            digits[i] = Integer.valueOf(input.substring(i, i+1));
+            digits[i] = Integer.parseInt(input.substring(i, i+1));
         }
         return digits;
     }
@@ -121,4 +121,44 @@ public class Utils
         return lines.stream().map(Long::valueOf).collect(Collectors.toList());
     }
 
+    public static int[][] transposeMatrix(int[][] m)
+    {
+        int[][] transposed = new int[m[0].length][m.length];
+        for (int i = 0; i < m.length; i++)
+        {
+            for (int j = 0; j < m[0].length; j++)
+            {
+                transposed[j][i] = m[i][j];
+            }
+        }
+
+        return transposed;
+    }
+
+    public static int maxFreq(int[] arr)
+    {
+        // using moore's voting algorithm
+        int res = 0;
+        int count = 1;
+        for (int i = 1; i < arr.length; i++)
+        {
+            if (arr[i] == arr[res])
+            {
+                count++;
+            }
+            else
+            {
+                count--;
+            }
+
+            if (count == 0)
+            {
+                res = i;
+                count = 1;
+            }
+
+        }
+
+        return arr[res];
+    }
 }
