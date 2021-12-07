@@ -135,6 +135,20 @@ public class Utils
         return transposed;
     }
 
+    public static boolean[][] transposeMatrix(boolean[][] m)
+    {
+        boolean[][] transposed = new boolean[m[0].length][m.length];
+        for (int i = 0; i < m.length; i++)
+        {
+            for (int j = 0; j < m[0].length; j++)
+            {
+                transposed[j][i] = m[i][j];
+            }
+        }
+
+        return transposed;
+    }
+
     public static int maxFreq(int[] arr)
     {
         // using moore's voting algorithm
